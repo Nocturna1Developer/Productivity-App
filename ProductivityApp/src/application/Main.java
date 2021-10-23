@@ -1,6 +1,5 @@
 package application;
 
-
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;
@@ -25,18 +24,45 @@ public class Main extends Application
 			hbox.setSpacing(50);
 			hbox.setPadding(new Insets(50,50,50,50));
 			
-			// Enter name text
-			Label nameTitle = new Label("Enter Name: ");
-			nameTitle.setFont(new Font("Arial", 15));
+			/*
+			* Once you open the application you will be prompted to create an account, a password and user name.
+			*/
+			Button createAccountButton = new Button("Create Account!");
+			createAccountButton.setPrefWidth(75);
 			
-			// Login Button logic
+			Label createNameTitle = new Label("Create Name!");
+			createNameTitle.setFont(new Font("Arial", 15));
+			
+			// TODO: Logic for entering name in input field
+			
+			Label createPasswordTitle = new Label("Create Password!");
+			createPasswordTitle.setFont(new Font("Arial", 15));
+			
+			// TODO: Logic for entering password in input field
+
+			
+			/*
+			* Once you login to your account you will be able to type in the name and password that you
+			* previously created.
+			*/
 			Button loginButton = new Button("Login!");
 			loginButton.setPrefWidth(75);
 			
-			// Music button logic
+			Label nameTitle = new Label("Enter Name!");
+			nameTitle.setFont(new Font("Arial", 15));
+			
+			// TODO: Logic for entering AND saving name in input field
+			
+			Label passwordTitle = new Label("Enter Password!");
+			passwordTitle.setFont(new Font("Arial", 15));
+			
+			// TODO: Logic for entering AND saving password in input field
+			
+			/*
+			* After accesing your account you will be able to play calming music at random.
+			*/
 			Button musicButton = new Button("Play Music!");
 			musicButton.setPrefWidth(75);
-			
 			
 			
 			// Adding buttons to scene
@@ -44,7 +70,7 @@ public class Main extends Application
 			hbox.getChildren().add(loginButton);
 			hbox.getChildren().add(musicButton);
 			
-			Scene scene = new Scene(hbox, 400, 400);
+			Scene scene = new Scene(hbox, 600, 600);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle(title);
 			primaryStage.show();
