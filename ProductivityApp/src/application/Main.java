@@ -1,13 +1,16 @@
 package application;
 
-import java.awt.Button;
-import java.awt.Insets;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 
 public class Main extends Application 
 {
@@ -17,16 +20,29 @@ public class Main extends Application
 	{
 		try
 		{
-			VBox hbox = new VBox();
-			hbox.setStyle(" fx background color: #d4cc79; ");
+			HBox hbox = new HBox();
+			hbox.setStyle("-fx-background-color: #d4cc79;");
 			hbox.setSpacing(50);
-			//hbox.setPadding(new Insets(50,50,50,50));
+			hbox.setPadding(new Insets(50,50,50,50));
 			
+			// Enter name text
+			Label nameTitle = new Label("Enter Name: ");
+			nameTitle.setFont(new Font("Arial", 15));
+			
+			// Login Button logic
 			Button loginButton = new Button("Login!");
-			Button testButton = new Button("Test!");
-			//loginButton.setPrefWidth(75);
+			loginButton.setPrefWidth(75);
 			
-			//hbox.getChildren().addAll(testButton, loginButton);
+			// Music button logic
+			Button musicButton = new Button("Play Music!");
+			musicButton.setPrefWidth(75);
+			
+			
+			
+			// Adding buttons to scene
+			hbox.getChildren().add(nameTitle);
+			hbox.getChildren().add(loginButton);
+			hbox.getChildren().add(musicButton);
 			
 			Scene scene = new Scene(hbox, 400, 400);
 			primaryStage.setScene(scene);
