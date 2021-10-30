@@ -35,6 +35,7 @@ public class Main extends Application
 			
 			// TODO: Logic for entering name in input field
 			
+			
 			Label createPasswordTitle = new Label("Create Password!");
 			createPasswordTitle.setFont(new Font("Arial", 15));
 			
@@ -53,17 +54,18 @@ public class Main extends Application
 			
 			// TODO: Logic for entering AND saving name in input field
 			
+			
 			Label passwordTitle = new Label("Enter Password!");
 			passwordTitle.setFont(new Font("Arial", 15));
+			
 			
 			// TODO: Logic for entering AND saving password in input field
 			
 			/*
-			* After accesing your account you will be able to play calming music at random.
+			* After accessing your account you will be able to play calming music at random.
 			*/
 			Button musicButton = new Button("Play Music!");
 			musicButton.setPrefWidth(75);
-			
 			
 			// Adding buttons to scene
 			hbox.getChildren().add(nameTitle);
