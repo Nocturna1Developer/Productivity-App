@@ -1,10 +1,9 @@
 package application;
 
-import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import java.io.IOException;
 
 public class LoginController extends MainController
 {

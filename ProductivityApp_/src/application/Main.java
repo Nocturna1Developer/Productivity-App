@@ -9,14 +9,14 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application
 {
-	//public static Stage window;
+	public static Stage window;
 	
 	@Override
 	public void start(Stage primaryStage)
 	{
 		try
 		{
-			//window = primaryStage;
+			window = primaryStage;
 			VBox root = (VBox)FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

@@ -12,14 +12,14 @@ import java.io.IOException;
 
 public abstract class MainController
 {
-	//public Stage primaryStage = application.Main.window;
+	public Stage primaryStage = application.Main.window;
 	
 	public void goToTimerPage() throws IOException
 	{
 		VBox root = (VBox)FXMLLoader.load(getClass().getResource("TimerPage.fxml"));
 		Scene timerScene = new Scene(root, 1080, 630);
 		
-		//primaryStage.setScene(timerScene);
-		//primaryStage.show();
+		primaryStage.setScene(timerScene);
+		primaryStage.show();
 	}
 }
