@@ -1,7 +1,7 @@
 /**
  * 
  */
-package application;
+package functionality;
 
 import java.util.Calendar;
 import java.util.Date;

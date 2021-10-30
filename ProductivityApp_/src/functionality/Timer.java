@@ -1,7 +1,7 @@
 /**
  * 
  */
-package application;
+package functionality;
 
 /**
  * @author Chinamay Kasareddy
