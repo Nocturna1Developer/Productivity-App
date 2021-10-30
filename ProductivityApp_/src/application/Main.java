@@ -8,6 +8,9 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+	
+	public static Stage window;
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
