@@ -1,4 +1,4 @@
-package functionality;
+package application;
 
 /**
  * The Account class will be used for getting and setting the username 

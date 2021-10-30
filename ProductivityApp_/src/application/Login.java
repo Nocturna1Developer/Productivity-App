@@ -1,4 +1,4 @@
-package functionality;
+package application;
 
 /**
  * This class will extend the account class which allows you to get your name and password.
