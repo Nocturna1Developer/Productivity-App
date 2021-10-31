@@ -22,7 +22,8 @@ import javafx.scene.layout.VBox;
 import javafx.util.converter.NumberStringConverter;
 
 /**
- * @author Chinamay Kasareddy, Saharsh Vedi
+ * 
+ * @author Saharsh Vedi
  *
  */
 public class NotificationTimer {

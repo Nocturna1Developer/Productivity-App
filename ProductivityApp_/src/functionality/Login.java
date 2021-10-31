@@ -4,7 +4,8 @@ package functionality;
  * This class will extend the account class which allows you to get your name and password.
  * You will be able to access your account here.
  * 
- * @author Chinamay Kasareddy
+ * @author 
+ *
  *
  */
 public class Login extends Account

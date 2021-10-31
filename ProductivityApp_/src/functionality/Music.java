@@ -6,7 +6,7 @@ package functionality;
 import java.io.File;
 
 /**
- * @author matha
+ * @author 
  *
  */
 public class Music

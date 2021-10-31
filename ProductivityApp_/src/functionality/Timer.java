@@ -4,7 +4,7 @@
 package functionality;
 
 /**
- * @author Chinamay Kasareddy
+ * @author 
  *
  */
 public class Timer

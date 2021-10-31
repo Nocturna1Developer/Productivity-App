@@ -4,7 +4,7 @@ package functionality;
  * The Account class will be used for getting and setting the username 
  * and password.
  * 
- * @author Chinamay Kasareddy
+ * @author 
  *
  */
 public class Account

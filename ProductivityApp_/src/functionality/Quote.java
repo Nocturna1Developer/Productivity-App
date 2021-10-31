@@ -4,7 +4,7 @@
 package functionality;
 
 /**
- * @author matha
+ * @author 
  *
  */
 public class Quote
