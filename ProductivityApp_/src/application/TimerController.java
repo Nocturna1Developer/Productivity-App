@@ -36,7 +36,12 @@ public class TimerController {
   private AnimationTimer animationTimer;
   private boolean timerSet;
 
-
+  /**
+   * Class that calls the handle method in every frame.
+   * 
+   * @author Saharsh Vedi
+   *
+   */
   private class TimerMethod extends AnimationTimer {
 
     @Override
@@ -45,6 +50,9 @@ public class TimerController {
       handlee();
     }
 
+    /**
+     * Calculates the time remaining on the timer and sets the label.
+     */
     private void handlee() {
       long diff = timeToStopAt.getTime() - Calendar.getInstance().getTimeInMillis();
       int seconds = (int) (diff / 1000) % 60;
@@ -60,6 +68,14 @@ public class TimerController {
     }
   }
 
+  /**
+   * Converts the given time to a Date object.
+   * 
+   * @param hours
+   * @param minutes
+   * @param seconds
+   * @return
+   */
   public Date timeToDate(int hours, int minutes, int seconds) {
     Calendar date = Calendar.getInstance();
     long timeInSecs = date.getTimeInMillis();
@@ -71,6 +87,13 @@ public class TimerController {
     return timer;
   }
 
+  /**
+   * Sets and starts the timer.
+   * 
+   * @param hours
+   * @param minutes
+   * @param seconds
+   */
   public void setTimer(int hours, int minutes, int seconds) {
     if (timerSet) {
       timer.cancel();
@@ -95,6 +118,9 @@ public class TimerController {
     return message;
   }
 
+  /**
+   * Starts the timer when the user clicks the Start Timer Button.
+   */
   public void startTimerHandler() {
     task = new TimerTask() {
       public void run() {
