@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <ImageView fitHeight="630.0" fitWidth="1143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/Minimalistic-Background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="loginButtonID" layoutX="466.0" layoutY="399.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Login" />
+            <Button layoutX="465.0" layoutY="457.0" mnemonicParsing="false" onAction="#createNewAccountButton" prefHeight="39.0" prefWidth="214.0" text="Create Account" />
+            <TextField fx:id="userID" layoutX="465.0" layoutY="226.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
+            <TextField fx:id="passID" layoutX="465.0" layoutY="286.0" prefHeight="39.0" prefWidth="214.0" promptText="Password" />
+            <Button layoutX="465.0" layoutY="567.0" mnemonicParsing="false" onAction="#closeApplication" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
+            <Label fx:id="errorLabel" layoutX="419.0" layoutY="339.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="401.0" layoutY="138.0" prefHeight="48.0" prefWidth="344.0" text="Clear Mind!" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria Math" size="56.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

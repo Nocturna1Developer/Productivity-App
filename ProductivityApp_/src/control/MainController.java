@@ -1,14 +1,12 @@
-package application;
+package control;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import java.io.IOException;
+
+import application.Main;
 
 /**
  * MainController 
@@ -28,10 +26,23 @@ public abstract class MainController
 	 */
 	public void goToTimerPage() throws IOException
 	{
-		VBox timerRoot = (VBox)FXMLLoader.load(getClass().getResource("TimerPage.fxml"));
-		Scene timerScene = new Scene(timerRoot, 1080, 630);
+		StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
+		Scene loginPageScene = new Scene(loginPage,1080,630);
 		
-		primaryStage.setScene(timerScene);
+		primaryStage.setScene(loginPageScene);
+		primaryStage.show();
+	}
+	
+	/**
+	 * goToMusicPage() - This method will change the scene from the LoginPage to the MusicPage.
+	 * 
+	 */
+	public void goToMusicPage() throws IOException
+	{
+		StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
+		Scene loginPageScene = new Scene(loginPage,1080,630);
+		
+		primaryStage.setScene(loginPageScene);
 		primaryStage.show();
 	}
 }

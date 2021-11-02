@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="608.0" fitWidth="745.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+         <image>
+            <Image url="@resources/362_wide.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="548.0" prefWidth="599.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="401.0" layoutY="138.0" prefHeight="48.0" prefWidth="344.0" text="Pick Music!" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria Math" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" layoutX="419.0" layoutY="339.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button id="startTimerButton" fx:id="startTimerButton" alignment="CENTER" layoutX="465.0" layoutY="225.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Track 1" />
+            <Button layoutX="466.0" layoutY="514.0" mnemonicParsing="false" onAction="#closeApplication" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
+            <Button id="startTimerButton" fx:id="startTimerButton11" alignment="CENTER" layoutX="466.0" layoutY="448.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Back To Timer Page" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

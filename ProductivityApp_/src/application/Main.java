@@ -17,7 +17,7 @@ public class Main extends Application
 		try
 		{
 			window = primaryStage;
-			VBox root = (VBox)FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+			VBox root = (VBox)FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);

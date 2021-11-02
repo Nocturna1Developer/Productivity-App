@@ -1,4 +1,4 @@
-package application;
+package control;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -14,7 +14,6 @@ import javafx.scene.control.TextField;
  * Timer Controller
  * 
  * This class will serve as the timer controller class which will allow users to set a timer.
- * 
  * 
  * @author Saharsh Vedi
  */
