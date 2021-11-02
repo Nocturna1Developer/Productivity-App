@@ -9,7 +9,7 @@ import java.io.IOException;
  * LoginController 
  * 
  * This class will serve as the login controller class which will function as an account creation class.
- * It will be responsible for users setting thier username and password.
+ * It will be responsible for users setting their user name and password.
  * 
  * @author Chinamay Kasareddy
  */

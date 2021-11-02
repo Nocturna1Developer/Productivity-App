@@ -11,24 +11,24 @@
 
 <StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginController">
    <children>
-      <ImageView fitHeight="630.0" fitWidth="1143.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+      <ImageView fitHeight="1000.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
          <image>
             <Image url="@../application/resources/Minimalistic-Background.jpg" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+      <AnchorPane>
          <children>
-            <Button fx:id="loginButtonID" layoutX="466.0" layoutY="399.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Login" />
-            <Button layoutX="465.0" layoutY="457.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Create Account" />
-            <TextField layoutX="465.0" layoutY="226.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
-            <TextField layoutX="465.0" layoutY="286.0" prefHeight="39.0" prefWidth="214.0" promptText="Password" />
-            <Button layoutX="465.0" layoutY="567.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Label layoutX="419.0" layoutY="339.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
+            <Button fx:id="loginButtonID" layoutX="639.0" layoutY="411.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Login" />
+            <Button layoutX="638.0" layoutY="469.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Create Account" />
+            <TextField layoutX="638.0" layoutY="238.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
+            <TextField layoutX="638.0" layoutY="298.0" prefHeight="39.0" prefWidth="214.0" promptText="Password" />
+            <Button layoutX="638.0" layoutY="579.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
+            <Label layoutX="592.0" layoutY="351.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="401.0" layoutY="138.0" prefHeight="48.0" prefWidth="344.0" text="Clear Mind!" textAlignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="574.0" layoutY="150.0" prefHeight="48.0" prefWidth="344.0" text="Clear Mind!" textAlignment="CENTER">
                <font>
                   <Font name="Cambria Math" size="56.0" />
                </font>

@@ -26,7 +26,7 @@ public abstract class MainController
 	 */
 	public void goToTimerPage() throws IOException
 	{
-		StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
+		StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/TimerPage.fxml"));
 		Scene loginPageScene = new Scene(loginPage,1080,630);
 		
 		primaryStage.setScene(loginPageScene);
