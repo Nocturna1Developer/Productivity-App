@@ -8,12 +8,11 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MusicController">
    <children>
       <ImageView fitHeight="608.0" fitWidth="745.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
          <image>
-            <Image url="@resources/362_wide.jpg" />
+            <Image url="@../application/resources/362_wide.jpg" />
          </image>
       </ImageView>
       <AnchorPane prefHeight="548.0" prefWidth="599.0">
@@ -23,14 +22,9 @@
                   <Font name="Cambria Math" size="56.0" />
                </font>
             </Label>
-            <Label fx:id="errorLabel" layoutX="419.0" layoutY="339.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Button id="startTimerButton" fx:id="startTimerButton" alignment="CENTER" layoutX="465.0" layoutY="225.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Track 1" />
-            <Button layoutX="466.0" layoutY="514.0" mnemonicParsing="false" onAction="#closeApplication" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Button id="startTimerButton" fx:id="startTimerButton11" alignment="CENTER" layoutX="466.0" layoutY="448.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Back To Timer Page" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="465.0" layoutY="225.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Track 1" />
+            <Button layoutX="466.0" layoutY="514.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="466.0" layoutY="448.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Back To Timer Page" />
          </children>
       </AnchorPane>
    </children>

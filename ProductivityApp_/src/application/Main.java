@@ -3,9 +3,8 @@ package application;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.StackPane;
 import javafx.fxml.FXMLLoader;
-
 
 public class Main extends Application
 {
@@ -17,7 +16,7 @@ public class Main extends Application
 		try
 		{
 			window = primaryStage;
-			VBox root = (VBox)FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
+			StackPane root = (StackPane)FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);

@@ -9,22 +9,21 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginController">
    <children>
-      <ImageView fitHeight="630.0" fitWidth="1143.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="630.0" fitWidth="1143.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
          <image>
-            <Image url="@resources/Minimalistic-Background.jpg" />
+            <Image url="@../application/resources/Minimalistic-Background.jpg" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="200.0" prefWidth="100.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
          <children>
             <Button fx:id="loginButtonID" layoutX="466.0" layoutY="399.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Login" />
-            <Button layoutX="465.0" layoutY="457.0" mnemonicParsing="false" onAction="#createNewAccountButton" prefHeight="39.0" prefWidth="214.0" text="Create Account" />
-            <TextField fx:id="userID" layoutX="465.0" layoutY="226.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
-            <TextField fx:id="passID" layoutX="465.0" layoutY="286.0" prefHeight="39.0" prefWidth="214.0" promptText="Password" />
-            <Button layoutX="465.0" layoutY="567.0" mnemonicParsing="false" onAction="#closeApplication" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Label fx:id="errorLabel" layoutX="419.0" layoutY="339.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
+            <Button layoutX="465.0" layoutY="457.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Create Account" />
+            <TextField layoutX="465.0" layoutY="226.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
+            <TextField layoutX="465.0" layoutY="286.0" prefHeight="39.0" prefWidth="214.0" promptText="Password" />
+            <Button layoutX="465.0" layoutY="567.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
+            <Label layoutX="419.0" layoutY="339.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

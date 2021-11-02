@@ -1,17 +1,17 @@
 /**
  * 
  */
-package functionality;
+package control;
 
 /**
  * @author 
  *
  */
-public class Quote
+public class QuoteController
 {
 	private String quote;
 
-	public Quote()
+	public QuoteController()
 	{
 
 	}
