@@ -4,7 +4,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+import org.controlsfx.control.Notifications;
 import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -123,7 +125,14 @@ public class TimerController {
   public void startTimerHandler() {
     task = new TimerTask() {
       public void run() {
-        System.out.println("Time to take a break!");
+        Platform.runLater(new Runnable() {
+
+          @Override
+          public void run() {
+            Notifications.create().title("Break!").text("Time to take a break!").show();
+
+          }
+        });
       }
     };
     timer = new Timer("timer");
