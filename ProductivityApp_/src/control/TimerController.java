@@ -42,18 +42,17 @@ public class TimerController {
     private AnimationTimer animationTimer;
     private boolean timerSet;
     
-    private File musicFile = new File("/ProductivityApp_/src/control/background.mp3") ;
+    private File musicFile = new File("../ProductivityApp_/src/control/background.mp3") ;
     private Media media;
     private MediaPlayer mediaPlayer;
     
     
     public void pickAnyMusic()
     {		
-    	
+    	System.out.println("In the play music method");
 		media = new Media(musicFile.toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
-//		
     }
 
     /**
