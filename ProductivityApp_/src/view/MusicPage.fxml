@@ -25,6 +25,8 @@
             <Button id="startTimerButton" alignment="CENTER" layoutX="465.0" layoutY="225.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Track 1" />
             <Button layoutX="466.0" layoutY="514.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
             <Button id="startTimerButton" alignment="CENTER" layoutX="466.0" layoutY="448.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Back To Timer Page" />
+            <Button layoutX="466.0" layoutY="277.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="39.0" prefWidth="99.0" text="Play" />
+            <Button layoutX="587.0" layoutY="277.0" mnemonicParsing="false" onAction="#pauseMusic" prefHeight="39.0" prefWidth="99.0" text="Pause" />
          </children>
       </AnchorPane>
    </children>
