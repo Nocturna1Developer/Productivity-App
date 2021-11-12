@@ -23,7 +23,9 @@ import application.Main;
 public abstract class MainController
 {
 	public Stage primaryStage = application.Main.window;
-
+    private File musicFile = new File("/ProductivityApp_/src/control/background.mp3") ;
+    private Media media;
+    private MediaPlayer mediaPlayer;
 	
 	/**
 	 * goToTimerPage() - This method will change the scene from the LoginPage to the TimerPage.
@@ -33,7 +35,9 @@ public abstract class MainController
 	{
 		StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/TimerPage.fxml"));
 		Scene loginPageScene = new Scene(loginPage,1080,630);
-
+		media = new Media(musicFile.toURI().toString());
+		mediaPlayer = new MediaPlayer(media);
+		mediaPlayer.play();
 		primaryStage.setScene(loginPageScene);
 		primaryStage.show();
 	}
