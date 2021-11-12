@@ -3,8 +3,6 @@ package control;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,8 +12,6 @@ public class MusicController extends MainController
 	
 	@FXML Button playMusicTrack_1_ButtonID;
 	private File musicFile;
-	private Media media;
-	private MediaPlayer mediaPlayer;
 	
 	/**
 	 * goToMusicPageButton()
@@ -42,27 +38,10 @@ public class MusicController extends MainController
 		this.musicFile = musicFile;
 	}
 	
-	public void initiatlize()
-	{
-		musicFile = new File("/ProductivityApp_/src/application/resources/background.mp3");
-		
-		if(musicFile!=null)
-		{
-			System.out.println("it worked!");
-		}
-	}
-	
 	/**
 	 * @param musicFile - the music file that you want to play
 	 */
-	public void playMusic()
-	{
-		initiatlize();
-	}
-	/**
-	 * @param musicFile - the music file that you want to pause
-	 */
-	public void pauseMusic()
+	public void playMusic(File musicFile)
 	{
 		
 	}

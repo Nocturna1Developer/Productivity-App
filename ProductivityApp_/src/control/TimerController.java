@@ -1,6 +1,5 @@
 package control;
 
-import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
@@ -14,8 +13,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 
 /**
  * Timer Controller
@@ -41,20 +38,6 @@ public class TimerController {
     private Date timeToStopAt;
     private AnimationTimer animationTimer;
     private boolean timerSet;
-    
-    private File musicFile = new File("/ProductivityApp_/src/control/background.mp3") ;
-    private Media media;
-    private MediaPlayer mediaPlayer;
-    
-    
-    public void pickAnyMusic()
-    {		
-    	
-		media = new Media(musicFile.toURI().toString());
-		mediaPlayer = new MediaPlayer(media);
-		mediaPlayer.play();
-//		
-    }
 
     /**
      * Inner Class that calls the handle method in every frame.
