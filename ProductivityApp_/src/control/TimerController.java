@@ -52,7 +52,7 @@ public class TimerController extends MainController {
     private AnimationTimer animationTimer;
     private boolean timerSet;
 
-    // Instance variables for playing random music (this is here so useres have
+    // Instance variables for playing random music (this is here so users have
     // quick access to music)
     private String filePath = "src\\control\\never_late_smooth_jazz_piano_soft.mp3";
     private Media media;
