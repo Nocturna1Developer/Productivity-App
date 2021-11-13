@@ -30,32 +30,20 @@ public class LoginController extends MainController
 		goToTimerPage();
 	}
 	
-	/**
-	 * 
-	 */
 	public String createUsername()
 	{
 		return null;
 	}
-	
-	/**
-	 * 
-	 */
+
 	public String createPassword()
 	{
 		return null;	
 	}
 
-	/**
-	 * 
-	 */
 	public void accessAccount()
 	{	
 	}
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
 	}
