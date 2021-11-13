@@ -25,7 +25,7 @@ import javafx.scene.media.MediaPlayer;
  * This class will serve as the timer controller class which will allow users to
  * set a timer.
  * 
- * @author Saharsh Vedi
+ * @author Saharsh Vedi, Chinamay Kasareddy
  */
 public class TimerController extends MainController
 {
@@ -78,75 +78,84 @@ public class TimerController extends MainController
 		/**
 		 * Calculates the time remaining on the timer and sets the label.
 		 */
-		private void handlee() {
+		private void handlee()
+		{
 		    long diff = timeToStopAt.getTime() - Calendar.getInstance().getTimeInMillis();
 		    int seconds = (int) (diff / 1000) % 60;
 		    int minutes = (int) ((diff / (1000 * 60)) % 60);
 		    int hours = (int) ((diff / (1000 * 60 * 60)) % 24);
 		    timerLabel.setText(hours + ":" + minutes + ":" + seconds);
-		    if (diff <= 0) {
-			timerLabel.setText("Time to take a break!");
-			stop();
-			timer.purge();
-			timerSet = false;
+		    if (diff <= 0)
+		    {
+				timerLabel.setText("Time to take a break!");
+				stop();
+				timer.purge();
+				timerSet = false;
 		    }
 		}
-	    }
+	 }
 	
-	    /**
-	     * Converts the given time to a Date object.
-	     * 
-	     * @param hours
-	     * @param minutes
-	     * @param seconds
-	     * @return
-	     */
-	    public Date timeToDate(int hours, int minutes, int seconds) {
+    /**
+     * Converts the given time to a Date object.
+     * 
+     * @param hours
+     * @param minutes
+     * @param seconds
+     * @return
+     */
+    public Date timeToDate(int hours, int minutes, int seconds)
+    {
 		Calendar date = Calendar.getInstance();
 		long timeInSecs = date.getTimeInMillis();
 		return new Date(timeInSecs + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000) + (seconds * 1000));
-	    }
-	
-	    /**
-	     * Sets and starts the timer.
-	     * 
-	     * @param hours
-	     * @param minutes
-	     * @param seconds
-	     */
-	    public void setTimer(int hours, int minutes, int seconds) {
-		if (timerSet) {
+    }
+
+    /**
+     * Sets and starts the timer.
+     * 
+     * @param hours
+     * @param minutes
+     * @param seconds
+     */
+    public void setTimer(int hours, int minutes, int seconds)
+    {
+		if (timerSet)
+		{
 		    timer.cancel();
 		    timer.purge();
 		}
 		timeToStopAt = timeToDate(hours, minutes, seconds);
 		timer.schedule(task, timeToStopAt);
 		timerSet = true;
-	    }
-	
-	    /**
-	     * @param time - set the amount of time you want to work or rest
-	     */
-	    public int timerLogic(int time) {
-		return 0;
-	    }
-	
-	    /**
-	     * Starts the timer when the user clicks the Start Timer Button.
-	     */
-	    public void startTimerHandler() {
-		task = new TimerTask() {
-		    public void run() {
+    }
+
+    /**
+     * @param time - set the amount of time you want to work or rest
+     */
+    public int timerLogic(int time)
+    {
+    	return 0;
+    }
+
+    /**
+     * Starts the timer when the user clicks the Start Timer Button.
+     */
+    public void startTimerHandler()
+    {
+		task = new TimerTask()
+		{
+		    public void run()
+		    {
 			Platform.runLater(new Runnable() {
 	
 			    @Override
 			    public void run() {
 				//Notifications.create().title("Break!").text("Time to take a break!").show();
-	
 			    }
 			});
 		    }
 		};
+		
 		timer = new Timer("timer");
 		int hours = Integer.parseInt(hourText.getText());
 		int minutes = Integer.parseInt(minutesText.getText());
@@ -156,5 +165,4 @@ public class TimerController extends MainController
 		animationTimer = new TimerMethod();
 		animationTimer.start();
     }
-
 }

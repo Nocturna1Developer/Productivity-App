@@ -22,7 +22,8 @@
                   <Font name="Cambria Math" size="56.0" />
                </font>
             </Label>
-            <Button id="startTimerButton" alignment="CENTER" layoutX="465.0" layoutY="225.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Track 1" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="465.0" layoutY="285.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Upbeat Music " />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="465.0" layoutY="225.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Peaceful Music " />
             <Button layoutX="466.0" layoutY="514.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
             <Button id="startTimerButton" alignment="CENTER" layoutX="466.0" layoutY="448.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Back To Timer Page" />
          </children>
