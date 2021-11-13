@@ -8,8 +8,6 @@ import java.util.TimerTask;
 
 import org.controlsfx.control.Notifications;
 
-//import org.controlsfx.control.Notifications;
-
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -150,7 +148,6 @@ public class TimerController extends MainController {
 		    @Override
 		    public void run() {
 			Notifications.create().title("Break!").text("Time to take a break!").show();
-
 		    }
 		});
 	    }
