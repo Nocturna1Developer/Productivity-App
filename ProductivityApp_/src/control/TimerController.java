@@ -1,11 +1,12 @@
 package control;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import org.controlsfx.control.Notifications;
 
 //import org.controlsfx.control.Notifications;
 
@@ -155,7 +156,7 @@ public class TimerController extends MainController
 				    @Override
 				    public void run()
 				    {
-				    	//Notifications.create().title("Break!").text("Time to take a break!").show();
+				    	Notifications.create().title("Break!").text("Time to take a break!").show();
 				    }
 				});
 		    }
