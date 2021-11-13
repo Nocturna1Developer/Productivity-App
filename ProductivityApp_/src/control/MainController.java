@@ -38,12 +38,12 @@ public abstract class MainController
 	 * goToMusicPage() - This method will change the scene from the LoginPage to the MusicPage.
 	 * 
 	 */
-	//public void goToMusicPage() throws IOException
-	//{
-		//StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
-		//Scene loginPageScene = new Scene(loginPage,1080,630);
+	public void goToMusicPage() throws IOException
+	{
+		StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
+		Scene loginPageScene = new Scene(loginPage,1080,630);
 		
-		//primaryStage.setScene(loginPageScene);
-		//primaryStage.show();
-	//}
+		primaryStage.setScene(loginPageScene);
+		primaryStage.show();
+	}
 }

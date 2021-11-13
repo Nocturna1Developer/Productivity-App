@@ -16,6 +16,7 @@ import java.io.IOException;
 public class LoginController extends MainController
 {
 	@FXML Button loginButtonID;
+	@FXML Button musicButtonID;
 	
 	/**
 	 * loginButton()
@@ -28,6 +29,11 @@ public class LoginController extends MainController
 	public void loginButton(ActionEvent event) throws IOException
 	{
 		goToTimerPage();
+	}
+	
+	public void goToMusicPageButton(ActionEvent event) throws IOException
+	{
+		goToMusicPage();
 	}
 	
 	public String createUsername()
