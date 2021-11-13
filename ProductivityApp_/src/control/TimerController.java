@@ -54,7 +54,7 @@ public class TimerController extends MainController {
 
     // Instance variables for playing random music (this is here so useres have
     // quick access to music)
-    private String filePath = "C:\\Users\\matha\\OneDrive\\Documents\\Github\\Term-Project\\ProductivityApp_\\src\\control\\never_late_smooth_jazz_piano_soft.mp3";
+    private String filePath = "src\\control\\never_late_smooth_jazz_piano_soft.mp3";
     private Media media;
     private MediaPlayer mediaPlayer;
 
