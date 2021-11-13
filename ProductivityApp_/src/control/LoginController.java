@@ -36,7 +36,6 @@ public class LoginController extends MainController
 	public String createUsername()
 	{
 		return null;
-		
 	}
 	
 	/**
@@ -44,16 +43,14 @@ public class LoginController extends MainController
 	 */
 	public String createPassword()
 	{
-		return null;
-		
+		return null;	
 	}
 
 	/**
 	 * 
 	 */
 	public void accessAccount()
-	{
-		
+	{	
 	}
 
 	/**
@@ -61,7 +58,5 @@ public class LoginController extends MainController
 	 */
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
-
 	}
 }

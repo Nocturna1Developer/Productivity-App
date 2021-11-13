@@ -36,17 +36,21 @@ public class TimerController {
     TextField secondsText;
     @FXML
     Label timerLabel;
+    
     private Timer timer;
     private TimerTask task;
     private Date timeToStopAt;
     private AnimationTimer animationTimer;
     private boolean timerSet;
     
-    private File musicFile = new File("../ProductivityApp_/src/control/background.mp3") ;
+    private File musicFile = new File("../control/never_late_smooth_jazz_piano_soft.mp3") ;
     private Media media;
     private MediaPlayer mediaPlayer;
-    
-    
+   
+    /**
+     * Plays a simple music file.
+     * 
+     */
     public void pickAnyMusic()
     {		
     	System.out.println("In the play music method");

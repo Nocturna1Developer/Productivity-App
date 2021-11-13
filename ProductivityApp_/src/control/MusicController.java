@@ -1,21 +1,15 @@
 package control;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-
 import java.io.File;
-import java.io.IOException;
 
 public class MusicController extends MainController
 {
-	
 	@FXML Button playMusicTrack_1_ButtonID;
 	private File musicFile;
-	private Media media;
-	private MediaPlayer mediaPlayer;
+	//private Media media;
+	//private MediaPlayer mediaPlayer;
 	
 	/**
 	 * goToMusicPageButton()
@@ -25,10 +19,10 @@ public class MusicController extends MainController
 	 * 
 	 * @param event - this is the event that will be responsible for changing scenes.
 	 */
-	public void goToMusicPageButton(ActionEvent event) throws IOException
-	{
-		goToMusicPage();
-	}
+	//public void goToMusicPageButton(ActionEvent event) throws IOException
+	//{
+		//goToMusicPage();
+	//}
 	
 	
 
@@ -44,12 +38,12 @@ public class MusicController extends MainController
 	
 	public void initiatlize()
 	{
-		musicFile = new File("/ProductivityApp_/src/application/resources/background.mp3");
+		//musicFile = new File("/ProductivityApp_/src/application/resources/background.mp3");
 		
-		if(musicFile!=null)
-		{
-			System.out.println("it worked!");
-		}
+		//if(musicFile!=null)
+		//{
+			//System.out.println("it worked!");
+		//}
 	}
 	
 	/**
@@ -57,7 +51,7 @@ public class MusicController extends MainController
 	 */
 	public void playMusic()
 	{
-		initiatlize();
+		//initiatlize();
 	}
 	/**
 	 * @param musicFile - the music file that you want to pause

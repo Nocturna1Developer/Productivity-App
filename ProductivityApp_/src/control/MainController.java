@@ -3,14 +3,8 @@ package control;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-
-import java.io.File;
 import java.io.IOException;
-
-import application.Main;
 
 /**
  * MainController 
@@ -42,12 +36,12 @@ public abstract class MainController
 	 * goToMusicPage() - This method will change the scene from the LoginPage to the MusicPage.
 	 * 
 	 */
-	public void goToMusicPage() throws IOException
-	{
-		StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
-		Scene loginPageScene = new Scene(loginPage,1080,630);
+	//public void goToMusicPage() throws IOException
+	//{
+		//StackPane loginPage = (StackPane)FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
+		//Scene loginPageScene = new Scene(loginPage,1080,630);
 		
-		primaryStage.setScene(loginPageScene);
-		primaryStage.show();
-	}
+		//primaryStage.setScene(loginPageScene);
+		//primaryStage.show();
+	//}
 }
