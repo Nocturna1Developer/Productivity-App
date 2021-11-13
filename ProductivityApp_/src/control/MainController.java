@@ -12,6 +12,8 @@ import java.io.IOException;
  * This class will serve as the main controller class in which every "Controller" class will extend.
  * It will be responsible for changing all of the scenes.
  * 
+ * @reference source code that was provided
+ * 
  * @author Chinamay Kasareddy
  */
 public abstract class MainController
