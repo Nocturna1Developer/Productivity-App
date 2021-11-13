@@ -25,6 +25,9 @@ import javafx.scene.media.MediaPlayer;
  * This class will serve as the timer controller class which will allow users to
  * set a timer.
  * 
+ * Reference (Playing Sound): https://www.youtube.com/watch?v=fV5zUq-tVug&ab_channel=ChannelAi
+ * Reference (Using Timer): https://www.educba.com/javafx-animationtimer/
+ * 
  * @author Saharsh Vedi, Chinamay Kasareddy
  */
 public class TimerController extends MainController
