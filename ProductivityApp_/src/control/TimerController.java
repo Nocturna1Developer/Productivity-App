@@ -1,8 +1,10 @@
 package control;
 
 import java.io.File;
+import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -12,11 +14,13 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.text.Text;
 
 /**
  * Timer Controller
@@ -30,7 +34,7 @@ import javafx.scene.media.MediaPlayer;
  * 
  * @author Saharsh Vedi, Chinamay Kasareddy
  */
-public class TimerController extends MainController {
+public class TimerController extends MainController implements Initializable {
     @FXML
     Button startTimerButton;
     @FXML
@@ -44,6 +48,8 @@ public class TimerController extends MainController {
     TextField secondsText;
     @FXML
     Label timerLabel;
+    @FXML
+    Text quotesText;
 
     // Instance Variables for the timer behaviour
     private Timer timer;
@@ -160,5 +166,16 @@ public class TimerController extends MainController {
 	setTimer(hours, minutes, seconds);
 	animationTimer = new TimerMethod();
 	animationTimer.start();
+    }
+
+    /**
+     * Initializes the Quotes Text
+     */
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+	// TODO Auto-generated method stub
+	QuoteController quoteController = getQuoteController();
+	quotesText.setText(quoteController.getQuote());
+	quoteController.addText(quotesText);
     }
 }
