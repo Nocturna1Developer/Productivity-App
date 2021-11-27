@@ -17,7 +17,7 @@ public class Main extends Application
 		{
 			window = primaryStage;
 			StackPane root = (StackPane)FXMLLoader.load(getClass().getResource("../view/LoginPage.fxml"));
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,1000,850);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();

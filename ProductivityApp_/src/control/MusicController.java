@@ -24,8 +24,6 @@ public class MusicController extends MainController
 		//goToMusicPage();
 	//}
 	
-	
-
 	public File getMusicFile()
 	{
 		return musicFile;
@@ -38,12 +36,7 @@ public class MusicController extends MainController
 	
 	public void initiatlize()
 	{
-		//musicFile = new File("/ProductivityApp_/src/application/resources/background.mp3");
-		
-		//if(musicFile!=null)
-		//{
-			//System.out.println("it worked!");
-		//}
+
 	}
 	
 	/**
@@ -51,7 +44,6 @@ public class MusicController extends MainController
 	 */
 	public void playMusic()
 	{
-		//initiatlize();
 	}
 	/**
 	 * @param musicFile - the music file that you want to pause

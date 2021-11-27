@@ -19,11 +19,11 @@
       <AnchorPane>
          <children>
             <Button fx:id="loginButtonID" layoutX="639.0" layoutY="411.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Login" />
-            <Button layoutX="638.0" layoutY="469.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Create Account" />
+            <Button fx:id="createAccountButtonID" layoutX="638.0" layoutY="469.0" mnemonicParsing="false" onAction="#createAccountButton" prefHeight="39.0" prefWidth="214.0" text="Create Account" />
             <TextField layoutX="638.0" layoutY="238.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
             <TextField layoutX="638.0" layoutY="298.0" prefHeight="39.0" prefWidth="214.0" promptText="Password" />
             <Button layoutX="638.0" layoutY="579.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Label layoutX="592.0" layoutY="351.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
+            <Label fx:id="badUserPassLabel" layoutX="592.0" layoutY="351.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
