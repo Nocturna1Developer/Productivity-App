@@ -17,7 +17,8 @@ import javafx.scene.text.Text;
  * account creation class. It will be responsible for users setting their user
  * name and password.
  * 
- * @author Chinamay Kasareddy
+ * @reference source code team-00-01
+ * @author Chinamay Kasareddy, Sarash Vedi
  */
 public class LoginController extends MainController implements Initializable {
     @FXML
@@ -43,21 +44,6 @@ public class LoginController extends MainController implements Initializable {
     public void goToMusicPageButton(ActionEvent event) throws IOException {
 	goToMusicPage();
     }
-
-    public String createUsername() {
-	return null;
-    }
-
-    public String createPassword() {
-	return null;
-    }
-
-    public void accessAccount() {
-    }
-
-    public static void main(String[] args) {
-    }
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 	// TODO Auto-generated method stub

@@ -52,13 +52,4 @@ public class MusicController extends MainController
 	{
 		
 	}
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args)
-	{
-
-
-	}
-
 }

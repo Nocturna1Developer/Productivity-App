@@ -22,11 +22,15 @@ public class QuoteController {
 	    "Simplicity is the ultimate sophistication. ~Leonardo Da Vinci" };
     private String currentQuote;
     private ArrayList<Text> textBoxes;
-
+    
+    /**
+     * This method will serve as the constructor for the class.
+     * 
+     */
     public QuoteController() {
-	currentQuote = QUOTES[0];
-	textBoxes = new ArrayList<Text>();
-	startChangingQuotes();
+		currentQuote = QUOTES[0];
+		textBoxes = new ArrayList<Text>();
+		startChangingQuotes();
     }
 
     public String getQuote() {
@@ -37,6 +41,10 @@ public class QuoteController {
 	textBoxes.add(text);
     }
 
+    /**
+     * This method will 
+     * 
+     */
     public void startChangingQuotes() {
 	new Timer().schedule(new TimerTask() {
 
@@ -52,18 +60,11 @@ public class QuoteController {
      * 
      */
     public void changeCurrentQuote() {
-	int count = (int) (Math.random() * QUOTES.length);
-	System.out.println(count);
-	this.currentQuote = QUOTES[count];
-	for (Text text : textBoxes) {
-	    text.setText(this.currentQuote);
-	}
-    }
-
-    /**
-     * @param args
-     */
-    public static void main(String[] args) {
-
+		int count = (int) (Math.random() * QUOTES.length);
+		System.out.println(count);
+		this.currentQuote = QUOTES[count];
+		for (Text text : textBoxes) {
+		    text.setText(this.currentQuote);
+		}
     }
 }

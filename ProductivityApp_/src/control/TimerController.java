@@ -114,9 +114,9 @@ public class TimerController extends MainController implements Initializable {
      * @return
      */
     public Date timeToDate(int hours, int minutes, int seconds) {
-	Calendar date = Calendar.getInstance();
-	long timeInSecs = date.getTimeInMillis();
-	return new Date(timeInSecs + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000) + (seconds * 1000));
+		Calendar date = Calendar.getInstance();
+		long timeInSecs = date.getTimeInMillis();
+		return new Date(timeInSecs + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000) + (seconds * 1000));
     }
 
     /**
@@ -127,20 +127,20 @@ public class TimerController extends MainController implements Initializable {
      * @param seconds
      */
     public void setTimer(int hours, int minutes, int seconds) {
-	if (timerSet) {
-	    timer.cancel();
-	    timer.purge();
-	}
-	timeToStopAt = timeToDate(hours, minutes, seconds);
-	timer.schedule(task, timeToStopAt);
-	timerSet = true;
+		if (timerSet) {
+		    timer.cancel();
+		    timer.purge();
+		}
+		timeToStopAt = timeToDate(hours, minutes, seconds);
+		timer.schedule(task, timeToStopAt);
+		timerSet = true;
     }
 
     /**
      * @param time - set the amount of time you want to work or rest
      */
     public int timerLogic(int time) {
-	return 0;
+    	return 0;
     }
 
     /**
