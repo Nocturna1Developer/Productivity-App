@@ -21,12 +21,9 @@ import javafx.scene.text.Text;
  * @author Chinamay Kasareddy, Sarash Vedi
  */
 public class LoginController extends MainController implements Initializable {
-    @FXML
-    Button loginButtonID;
-    @FXML
-    Button musicButtonID;
-    @FXML
-    Text quotesText;
+    @FXML Button loginButtonID;
+    @FXML Button musicButtonID;
+    @FXML Text quotesText;
 
     /**
      * loginButton()
@@ -37,18 +34,43 @@ public class LoginController extends MainController implements Initializable {
      * @param event - this is the event that will be responsible for changing
      *              scenes.
      */
-    public void loginButton(ActionEvent event) throws IOException {
-	goToTimerPage();
+    public void loginButton(ActionEvent event) throws IOException
+    {
+    	goToTimerPage();
     }
-
-    public void goToMusicPageButton(ActionEvent event) throws IOException {
-	goToMusicPage();
+    
+    /**
+     * goToMusicPageButton()
+     * 
+     * This will call the method from the MainController.java. It is and Action
+     * event that is hooked up to the button named "Go To Music Page"
+     * 
+     * @param event - this is the event that will be responsible for changing
+     *                scenes.
+     */
+    public void goToMusicPageButton(ActionEvent event) throws IOException 
+    {
+    	goToMusicPage();
     }
+    
+    /**
+     * initialize()
+     * 
+     * This method will ....
+     * 
+     * @param arg0
+     * @param arg1 
+     */
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-	// TODO Auto-generated method stub
-	QuoteController quoteController = getQuoteController();
-	quotesText.setText(quoteController.getQuote());
-	quoteController.addText(quotesText);
+    public void initialize(URL arg0, ResourceBundle arg1) 
+    {
+		QuoteController quoteController = getQuoteController();
+		quotesText.setText(quoteController.getQuote());
+		quoteController.addText(quotesText);
+    }
+    
+    public void quitApplicationButton(ActionEvent event) throws IOException
+    {
+    	quitApplication();
     }
 }

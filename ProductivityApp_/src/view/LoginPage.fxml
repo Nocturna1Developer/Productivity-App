@@ -19,14 +19,9 @@
       </ImageView>
       <AnchorPane>
          <children>
-            <Button fx:id="loginButtonID" layoutX="639.0" layoutY="375.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Login" />
+            <Button fx:id="loginButtonID" layoutX="639.0" layoutY="375.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Launch App!" />
             <TextField layoutX="640.0" layoutY="311.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
             <Button layoutX="638.0" layoutY="579.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Label fx:id="badUserPassLabel" layoutX="592.0" layoutY="351.0" opacity="0.0" prefHeight="48.0" prefWidth="307.0" text="Incorrect Username or Password" textFill="RED">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="575.0" layoutY="155.0" prefHeight="48.0" prefWidth="344.0" text="Clear Mind!" textAlignment="CENTER">
                <font>
                   <Font name="Cambria Math" size="69.0" />

@@ -34,24 +34,18 @@ import javafx.scene.text.Text;
  * 
  * @author Saharsh Vedi, Chinamay Kasareddy
  */
-public class TimerController extends MainController implements Initializable {
-    @FXML
-    Button startTimerButton;
-    @FXML
-    Button playMusicButtonID;
+public class TimerController extends MainController implements Initializable
+{
+    @FXML Button 	startTimerButton;
+    @FXML Button 	playMusicButtonID;
 
-    @FXML
-    TextField hourText;
-    @FXML
-    TextField minutesText;
-    @FXML
-    TextField secondsText;
-    @FXML
-    Label timerLabel;
-    @FXML
-    Text quotesText;
+    @FXML TextField hourText;
+    @FXML TextField minutesText;
+    @FXML TextField secondsText;
+    @FXML Label 	timerLabel;
+    @FXML Text 		quotesText;
 
-    // Instance Variables for the timer behaviour
+    // Instance Variables for the timer behavior
     private Timer timer;
     private TimerTask task;
     private Date timeToStopAt;
@@ -67,11 +61,12 @@ public class TimerController extends MainController implements Initializable {
     /**
      * Plays a simple music file.
      */
-    public void playMusicButton(ActionEvent event) {
-	System.out.println("Playing Music File!");
-	media = new Media(new File(filePath).toURI().toString());
-	mediaPlayer = new MediaPlayer(media);
-	mediaPlayer.play();
+    public void playMusicButton(ActionEvent event)
+    {
+		System.out.println("Playing Music File!");
+		media = new Media(new File(filePath).toURI().toString());
+		mediaPlayer = new MediaPlayer(media);
+		mediaPlayer.play();
     }
 
     /**
@@ -80,29 +75,32 @@ public class TimerController extends MainController implements Initializable {
      * @author Saharsh Vedi
      *
      */
-    private class TimerMethod extends AnimationTimer {
-	@Override
-	public void handle(long now) {
-	    // call the method
-	    handlee();
-	}
-
-	/**
-	 * Calculates the time remaining on the timer and sets the label.
-	 */
-	private void handlee() {
-	    long diff = timeToStopAt.getTime() - Calendar.getInstance().getTimeInMillis();
-	    int seconds = (int) (diff / 1000) % 60;
-	    int minutes = (int) ((diff / (1000 * 60)) % 60);
-	    int hours = (int) ((diff / (1000 * 60 * 60)) % 24);
-	    timerLabel.setText(hours + ":" + minutes + ":" + seconds);
-	    if (diff <= 0) {
-		timerLabel.setText("Time to take a break!");
-		stop();
-		timer.purge();
-		timerSet = false;
-	    }
-	}
+    private class TimerMethod extends AnimationTimer
+    {
+		@Override
+		public void handle(long now)
+		{
+		    handlee();
+		}
+	
+		/**
+		 * Calculates the time remaining on the timer and sets the label.
+		 */
+		private void handlee()
+		{
+		    long diff = timeToStopAt.getTime() - Calendar.getInstance().getTimeInMillis();
+		    int seconds = (int) (diff / 1000) % 60;
+		    int minutes = (int) ((diff / (1000 * 60)) % 60);
+		    int hours = (int) ((diff / (1000 * 60 * 60)) % 24);
+		    timerLabel.setText(hours + ":" + minutes + ":" + seconds);
+		    if (diff <= 0)
+		    {
+				timerLabel.setText("Time to take a break!");
+				stop();
+				timer.purge();
+				timerSet = false;
+		    }
+		}
     }
 
     /**
@@ -126,8 +124,10 @@ public class TimerController extends MainController implements Initializable {
      * @param minutes
      * @param seconds
      */
-    public void setTimer(int hours, int minutes, int seconds) {
-		if (timerSet) {
+    public void setTimer(int hours, int minutes, int seconds)
+    {
+		if (timerSet)
+		{
 		    timer.cancel();
 		    timer.purge();
 		}
@@ -139,43 +139,52 @@ public class TimerController extends MainController implements Initializable {
     /**
      * @param time - set the amount of time you want to work or rest
      */
-    public int timerLogic(int time) {
+    public int timerLogic(int time)
+    {
     	return 0;
     }
 
     /**
      * Starts the timer when the user clicks the Start Timer Button.
      */
-    public void startTimerHandler() {
-	task = new TimerTask() {
-	    public void run() {
-		Platform.runLater(new Runnable() {
-
-		    @Override
-		    public void run() {
-			Notifications.create().title("Break!").text("Time to take a break!").show();
+    public void startTimerHandler()
+    {
+		task = new TimerTask()
+		{
+		    public void run()
+		    {
+				Platform.runLater(new Runnable()
+				{
+		
+				    @Override
+				    public void run()
+				    {
+				    	Notifications.create().title("Break!").text("Time to take a break!").show();
+				    }
+				});
 		    }
-		});
-	    }
-	};
-	timer = new Timer("timer");
-	int hours = Integer.parseInt(hourText.getText());
-	int minutes = Integer.parseInt(minutesText.getText());
-	int seconds = Integer.parseInt(secondsText.getText());
-
-	setTimer(hours, minutes, seconds);
-	animationTimer = new TimerMethod();
-	animationTimer.start();
+		};
+		
+		// Sets the parameters in the text boxes in the .fxml file
+		timer = new Timer("timer");
+		int hours = Integer.parseInt(hourText.getText());
+		int minutes = Integer.parseInt(minutesText.getText());
+		int seconds = Integer.parseInt(secondsText.getText());
+	
+		setTimer(hours, minutes, seconds);
+		animationTimer = new TimerMethod();
+		animationTimer.start();
     }
 
     /**
      * Initializes the Quotes Text
      */
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-	// TODO Auto-generated method stub
-	QuoteController quoteController = getQuoteController();
-	quotesText.setText(quoteController.getQuote());
-	quoteController.addText(quotesText);
+    public void initialize(URL arg0, ResourceBundle arg1)
+    {
+		// TODO Auto-generated method stub
+		QuoteController quoteController = getQuoteController();
+		quotesText.setText(quoteController.getQuote());
+		quoteController.addText(quotesText);
     }
 }

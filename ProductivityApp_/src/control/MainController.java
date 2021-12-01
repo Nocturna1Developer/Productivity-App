@@ -18,7 +18,8 @@ import javafx.stage.Stage;
  * 
  * @author Chinamay Kasareddy, Saharsh Vedi
  */
-public abstract class MainController {
+public abstract class MainController
+{
     public Stage primaryStage = application.Main.window;
     private QuoteController quoteController = new QuoteController();
 
@@ -27,16 +28,22 @@ public abstract class MainController {
      * TimerPage.
      * 
      */
-    public void goToTimerPage() throws IOException {
-	StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/TimerPage.fxml"));
-	Scene loginPageScene = new Scene(loginPage, 1080, 630);
-
-	primaryStage.setScene(loginPageScene);
-	primaryStage.show();
+    public void goToTimerPage() throws IOException
+    {
+		StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/TimerPage.fxml"));
+		Scene loginPageScene = new Scene(loginPage, 1080, 630);
+	
+		primaryStage.setScene(loginPageScene);
+		primaryStage.show();
     }
-
-    public QuoteController getQuoteController() {
-	return quoteController;
+    
+    /**
+     * getQuoteController() - This method will ...
+     * 
+     */
+    public QuoteController getQuoteController()
+    {
+		return quoteController;
     }
 
     /**
@@ -44,11 +51,33 @@ public abstract class MainController {
      * MusicPage.
      * 
      */
-    public void goToMusicPage() throws IOException {
-	StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
-	Scene loginPageScene = new Scene(loginPage, 1080, 630);
-
-	primaryStage.setScene(loginPageScene);
-	primaryStage.show();
+    public void goToMusicPage() throws IOException
+    {
+		StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
+		Scene loginPageScene = new Scene(loginPage, 1080, 630);
+	
+		primaryStage.setScene(loginPageScene);
+		primaryStage.show();
+    }
+    
+    /**
+     * goBackToTimerPage() - This method will change the scene from the music page back to the
+     * timer page.
+     * 
+     */
+    public void goBackToTimerPage() throws IOException
+    {
+		StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/TimerPage.fxml"));
+		Scene loginPageScene = new Scene(loginPage, 1080, 630);
+	
+		primaryStage.setScene(loginPageScene);
+		primaryStage.show();
+    }
+    
+    public void quitApplication() throws IOException
+    {
+		//Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		//window.setTitle("SUCCESS!");
+		//window.close();
     }
 }
