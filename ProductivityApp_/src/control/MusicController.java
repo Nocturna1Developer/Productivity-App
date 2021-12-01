@@ -29,7 +29,7 @@ public class MusicController extends MainController
     // TODO: Add more file paths here
     
     
-    private Media media;
+    private Media 		media;
     private MediaPlayer mediaPlayer;
 
     /**
