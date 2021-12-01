@@ -14,17 +14,17 @@
 
 <StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TimerController">
    <children>
-      <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="670.0" fitWidth="1446.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
          <image>
-            <Image url="@../application/resources/photo-1466781783364-36c955e42a7f.jpg" />
+            <Image url="@../application/resources/photo-1428908728789-d2de25dbd4e2.jpg" />
          </image>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ImageView>
-      <AnchorPane prefHeight="645.0" prefWidth="966.0">
+      <AnchorPane prefHeight="670.0" prefWidth="1005.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="642.0" layoutY="128.0" prefHeight="48.0" prefWidth="344.0" text="Set Timer!" textAlignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="642.0" layoutY="128.0" prefHeight="77.0" prefWidth="344.0" text="Set Timer!" textAlignment="CENTER">
                <font>
                   <Font name="Cambria Math" size="56.0" />
                </font>
@@ -52,14 +52,14 @@
                </font>
             </Label>
             <Button id="startTimerButton" fx:id="startTimerButton" alignment="CENTER" layoutX="706.0" layoutY="377.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Start Timer" />
-            <Button layoutX="707.0" layoutY="559.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="440.0" mnemonicParsing="false" onAction="#playMusicButton" prefHeight="38.0" prefWidth="214.0" text="Play Any Music" />
-            <Text fx:id="quotesText" layoutX="252.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="344.0">
+            <Button layoutX="707.0" layoutY="584.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="464.0" mnemonicParsing="false" onAction="#playMusicButton" prefHeight="38.0" prefWidth="214.0" text="Play Any Music" />
+            <Text fx:id="quotesText" layoutX="67.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="344.0">
                <font>
                   <Font name="Javanese Text" size="18.0" />
                </font>
             </Text>
-            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="498.0" mnemonicParsing="false" onAction="#playMusicButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="520.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
          </children>
       </AnchorPane>
    </children>

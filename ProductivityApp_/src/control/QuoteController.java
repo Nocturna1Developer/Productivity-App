@@ -15,7 +15,7 @@ import javafx.scene.text.Text;
  * @author
  *
  */
-public class QuoteController extends MainController
+public class QuoteController 
 {
 
     private final String[] QUOTES = new String[] 
@@ -88,6 +88,6 @@ public class QuoteController extends MainController
     
     public void quitApplicationButton(ActionEvent event) throws IOException
     {
-    	quitApplication();
+    	//quitApplication();
     }
 }

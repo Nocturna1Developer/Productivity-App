@@ -43,13 +43,13 @@ public class MusicController extends MainController
 		mediaPlayer.play();
     }
     
-	// TODO: Be able to pause the music file here
+	// TODO: Be able to pause the music file here...
 	/**
 	 * @param musicFile - the music file that you want to pause
 	 */
 	public void pauseMusic()
 	{
-		
+		mediaPlayer.pause();
 	}
 	
 	/**

@@ -31,7 +31,7 @@ public abstract class MainController
     public void goToTimerPage() throws IOException
     {
 		StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/TimerPage.fxml"));
-		Scene loginPageScene = new Scene(loginPage, 1080, 630);
+		Scene loginPageScene = new Scene(loginPage, 1005, 670);
 	
 		primaryStage.setScene(loginPageScene);
 		primaryStage.show();
@@ -54,7 +54,7 @@ public abstract class MainController
     public void goToMusicPage() throws IOException
     {
 		StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/MusicPage.fxml"));
-		Scene loginPageScene = new Scene(loginPage, 1080, 630);
+		Scene loginPageScene = new Scene(loginPage, 1005, 670);
 	
 		primaryStage.setScene(loginPageScene);
 		primaryStage.show();
@@ -68,7 +68,7 @@ public abstract class MainController
     public void goBackToTimerPage() throws IOException
     {
 		StackPane loginPage = (StackPane) FXMLLoader.load(getClass().getResource("../view/TimerPage.fxml"));
-		Scene loginPageScene = new Scene(loginPage, 1080, 630);
+		Scene loginPageScene = new Scene(loginPage, 1005, 670);
 	
 		primaryStage.setScene(loginPageScene);
 		primaryStage.show();
