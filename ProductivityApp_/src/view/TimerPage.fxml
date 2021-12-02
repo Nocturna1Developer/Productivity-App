@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TimerController">
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TimerController">
    <children>
       <ImageView fitHeight="670.0" fitWidth="1446.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
          <image>
@@ -39,7 +39,7 @@
                   <Font name="Cambria Math" size="13.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" layoutX="707.0" layoutY="189.0" prefHeight="100.0" prefWidth="214.0" spacing="10.0">
+            <HBox alignment="CENTER" layoutX="702.0" layoutY="216.0" prefHeight="41.0" prefWidth="214.0" spacing="10.0">
                <children>
                   <TextField id="hourText" fx:id="hourText" prefHeight="26.0" prefWidth="50.0" text="00" />
                   <TextField id="minutesText" fx:id="minutesText" prefHeight="26.0" prefWidth="50.0" text="00" />
@@ -60,6 +60,11 @@
                </font>
             </Text>
             <Button id="startTimerButton" fx:id="musicButtonID" alignment="CENTER" layoutX="707.0" layoutY="520.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
+            <Label fx:id="timerErrorLabel" alignment="CENTER" layoutX="707.0" layoutY="256.0" opacity="0.0" prefHeight="18.0" prefWidth="208.0" text="Please make sure the time is valid!" textAlignment="CENTER" textFill="#f20606">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
