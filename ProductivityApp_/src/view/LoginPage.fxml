@@ -19,8 +19,8 @@
       </ImageView>
       <AnchorPane prefHeight="670.0" prefWidth="1005.0">
          <children>
-            <Button fx:id="loginButtonID" layoutX="639.0" layoutY="299.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Launch App!" />
-            <TextField layoutX="640.0" layoutY="235.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
+            <Button fx:id="loginButtonID" layoutX="640.0" layoutY="353.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="39.0" prefWidth="214.0" text="Launch App!" />
+            <TextField fx:id="userID" layoutX="640.0" layoutY="235.0" prefHeight="39.0" prefWidth="214.0" promptText="Username" />
             <Button layoutX="638.0" layoutY="503.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="575.0" layoutY="79.0" prefHeight="48.0" prefWidth="344.0" text="Clear Mind!" textAlignment="CENTER">
                <font>
@@ -35,6 +35,11 @@
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="573.0" layoutY="187.0" prefHeight="48.0" prefWidth="344.0" text="Whats your name?" textAlignment="CENTER">
                <font>
                   <Font name="Cambria Math" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="badUserNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="581.0" layoutY="293.0" opacity="0.0" prefHeight="48.0" prefWidth="344.0" text="Please don't leave username blank." textAlignment="CENTER" textFill="#ff0d0d">
+               <font>
+                  <Font name="Cambria Math" size="17.0" />
                </font>
             </Label>
          </children>

@@ -8,6 +8,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 /**
@@ -22,21 +24,45 @@ import javafx.scene.text.Text;
  */
 public class LoginController extends MainController implements Initializable
 {
-    @FXML Button loginButtonID;
-    @FXML Text quotesText;
-
+    @FXML Button 			loginButtonID;
+    @FXML private TextField userID;
+    @FXML Text 				quotesText;
+	@FXML private Label 	badUserNameLabel;
+	private String 			username = "";
+	
+	public void getUsername()
+	{
+		username = userID.getText();
+	}
+	
+	// Makes sure that the user name is not blank
+	public boolean isLegal()
+	{
+		getUsername();
+		badUserNameLabel.setOpacity(0);
+		if(username.length() < 1)
+		{
+			badUserNameLabel.setOpacity(1);
+			return false;
+		}
+		return true;
+	}
     /**
      * loginButton()
      * 
      * This will call the method from the MainController.java. It is and Action
-     * event that is hooked up to the button named "Launch App".
+     * event that is hooked up to the button named "Launch App". It will go to
+     * the next page if the user name is appropriate.
      * 
      * @param event - this is the event that will be responsible for changing
      *              scenes.
      */
     public void loginButton(ActionEvent event) throws IOException
     {
-    	goToTimerPage();
+    	if(isLegal())
+    	{
+    		goToTimerPage();
+    	}
     }
     
     /**
