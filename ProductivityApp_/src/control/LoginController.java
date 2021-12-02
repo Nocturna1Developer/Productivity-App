@@ -20,9 +20,9 @@ import javafx.scene.text.Text;
  * @reference source code team-00-01
  * @author Chinamay Kasareddy, Sarash Vedi
  */
-public class LoginController extends MainController implements Initializable {
+public class LoginController extends MainController implements Initializable
+{
     @FXML Button loginButtonID;
-    @FXML Button musicButtonID;
     @FXML Text quotesText;
 
     /**
@@ -37,20 +37,6 @@ public class LoginController extends MainController implements Initializable {
     public void loginButton(ActionEvent event) throws IOException
     {
     	goToTimerPage();
-    }
-    
-    /**
-     * goToMusicPageButton()
-     * 
-     * This will call the method from the MainController.java. It is and Action
-     * event that is hooked up to the button named "Go To Music Page"
-     * 
-     * @param event - this is the event that will be responsible for changing
-     *                scenes.
-     */
-    public void goToMusicPageButton(ActionEvent event) throws IOException 
-    {
-    	goToMusicPage();
     }
     
     /**

@@ -1,6 +1,7 @@
 package control;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
@@ -67,6 +68,20 @@ public class TimerController extends MainController implements Initializable
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
+    }
+    
+    /**
+     * goToMusicPageButton()
+     * 
+     * This will call the method from the MainController.java. It is and Action
+     * event that is hooked up to the button named "Go To Music Page"
+     * 
+     * @param event - this is the event that will be responsible for changing
+     *                scenes.
+     */
+    public void goToMusicPageButton(ActionEvent event) throws IOException 
+    {
+    	goToMusicPage();
     }
 
     /**

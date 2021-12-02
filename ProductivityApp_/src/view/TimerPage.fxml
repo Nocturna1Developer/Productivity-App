@@ -59,7 +59,7 @@
                   <Font name="Javanese Text" size="18.0" />
                </font>
             </Text>
-            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="520.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
+            <Button id="startTimerButton" fx:id="musicButtonID" alignment="CENTER" layoutX="707.0" layoutY="520.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
          </children>
       </AnchorPane>
    </children>
