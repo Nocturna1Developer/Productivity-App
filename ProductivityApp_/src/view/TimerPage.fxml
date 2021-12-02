@@ -51,15 +51,20 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <Button id="startTimerButton" fx:id="startTimerButton" alignment="CENTER" layoutX="706.0" layoutY="377.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Start Timer" />
-            <Button layoutX="707.0" layoutY="584.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="464.0" mnemonicParsing="false" onAction="#playMusicButton" prefHeight="38.0" prefWidth="214.0" text="Play Any Music" />
+            <Button id="startTimerButton" fx:id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="419.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Start Timer" />
+            <Button layoutX="707.0" layoutY="600.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="480.0" mnemonicParsing="false" onAction="#playMusicButton" prefHeight="38.0" prefWidth="214.0" text="Play Any Music" />
             <Text fx:id="quotesText" layoutX="67.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="344.0">
                <font>
                   <Font name="Javanese Text" size="18.0" />
                </font>
             </Text>
-            <Button id="startTimerButton" fx:id="musicButtonID" alignment="CENTER" layoutX="707.0" layoutY="520.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
+            <Button id="startTimerButton" fx:id="musicButtonID" alignment="CENTER" layoutX="707.0" layoutY="536.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="647.0" layoutY="361.0" prefHeight="48.0" prefWidth="344.0" text="Please enter a valid time!" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Cambria Math" size="17.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

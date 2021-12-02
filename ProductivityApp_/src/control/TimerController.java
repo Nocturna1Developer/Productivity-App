@@ -37,8 +37,9 @@ import javafx.scene.text.Text;
  */
 public class TimerController extends MainController implements Initializable
 {
-    @FXML Button 	startTimerButton;
-    @FXML Button 	playMusicButtonID;
+    @FXML Button 		startTimerButton;
+    @FXML Button 		playMusicButtonID;
+    @FXML private Label badTimeLabel;
 
     @FXML TextField hourText;
     @FXML TextField minutesText;
