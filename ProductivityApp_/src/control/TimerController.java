@@ -157,7 +157,7 @@ public class TimerController extends MainController implements Initializable {
      * @param time - the time you want to check if it is legal.
      */
     private boolean timeIsLegal(String time) {
-	if (!time.matches(".*[a-zA-Z]+.*")) {
+	if (!time.matches(".*[a-zA-Z]+.*") && !time.equals("")) {
 	    if (Integer.parseInt(time) >= 0) {
 		return true;
 	    }
