@@ -32,9 +32,6 @@ public class MusicController extends MainController {
 
     // Instance variables for playing random music
     private String filePath = "src\\control\\never_late_smooth_jazz_piano_soft.mp3";
-
-    // TODO: Add more file paths here
-
     private Media media;
     private MediaPlayer mediaPlayer;
 
@@ -124,13 +121,12 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Hiphop() {
 		System.out.println("in the hiphop");
-		filePath = "src\\control\\hiphop.mp3";
+		filePath = "src\\control\\hiphip.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
 	}
-
-    // TODO: Be able to pause the music file here...
+	
     /**
      * @param musicFile - the music file that you want to pause
      */
