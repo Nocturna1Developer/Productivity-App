@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TimerController">
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TimerController">
    <children>
       <ImageView fitHeight="670.0" fitWidth="1446.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_LEFT">
          <image>
@@ -52,14 +52,13 @@
                </font>
             </Label>
             <Button id="startTimerButton" fx:id="startTimerButton" alignment="CENTER" layoutX="706.0" layoutY="377.0" mnemonicParsing="false" onAction="#startTimerHandler" prefHeight="38.0" prefWidth="214.0" text="Start Timer" />
-            <Button layoutX="707.0" layoutY="584.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="214.0" text="Quit Application" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="464.0" mnemonicParsing="false" onAction="#playMusicButton" prefHeight="38.0" prefWidth="214.0" text="Play Any Music" />
-            <Text fx:id="quotesText" layoutX="67.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="344.0">
+            <Button id="startTimerButton" alignment="CENTER" layoutX="707.0" layoutY="464.0" mnemonicParsing="false" onAction="#playMusicButton" opacity="0.0" prefHeight="38.0" prefWidth="214.0" text="Play Any Music" />
+            <Text fx:id="quotesText" layoutX="70.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="344.0">
                <font>
                   <Font name="Javanese Text" size="18.0" />
                </font>
             </Text>
-            <Button id="startTimerButton" fx:id="musicButtonID" alignment="CENTER" layoutX="707.0" layoutY="520.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
+            <Button id="startTimerButton" fx:id="musicButtonID" alignment="CENTER" layoutX="706.0" layoutY="445.0" mnemonicParsing="false" onAction="#goToMusicPageButton" prefHeight="38.0" prefWidth="214.0" text="Go To Music Page" />
             <Label fx:id="timerErrorLabel" alignment="CENTER" layoutX="707.0" layoutY="256.0" opacity="0.0" prefHeight="18.0" prefWidth="208.0" text="Please make sure the time is valid!" textAlignment="CENTER" textFill="#f20606">
                <font>
                   <Font name="Cambria Bold" size="12.0" />
