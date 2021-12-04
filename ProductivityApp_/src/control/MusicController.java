@@ -48,6 +48,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Jazz() {
 		System.out.println("in the jazz");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.stop();
+		}
 		filePath = "src\\control\\never_late_smooth_jazz_piano_soft.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -56,6 +60,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Blues() {
 		System.out.println("in the blues");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.stop();
+		}
 		filePath = "src\\control\\blues.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -66,6 +74,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Piano() {
 		System.out.println("in the piano");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.stop();
+		}
 		filePath = "src\\control\\piano.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -77,6 +89,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Violin() {
 		System.out.println("in the violin");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.stop();
+		}
 		filePath = "src\\control\\violin.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -89,6 +105,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Pop() {
 		System.out.println("in the pop");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.pause();
+		}
 		filePath = "src\\control\\pop.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -100,6 +120,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Funk() {
 		System.out.println("in the funk");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.pause();
+		}
 		filePath = "src\\control\\funk.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -111,6 +135,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Rock() {
 		System.out.println("in the rap");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.stop();
+		}
 		filePath = "src\\control\\rock.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -121,6 +149,10 @@ public class MusicController extends MainController {
     // Peaceful tracks
 	public void playMusicTrackID_Hiphop() {
 		System.out.println("in the hiphop");
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.stop();
+		}
 		filePath = "src\\control\\hiphip.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -131,7 +163,10 @@ public class MusicController extends MainController {
      * @param musicFile - the music file that you want to pause
      */
     public void pauseMusic() {
-		mediaPlayer.pause();
+		if(mediaPlayer != null)
+		{
+			mediaPlayer.pause();
+		}
     }
 
     /**
