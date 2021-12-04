@@ -35,31 +35,24 @@ import javafx.scene.text.Text;
  * 
  * @author Saharsh Vedi, Chinamay Kasareddy
  */
-public class TimerController extends MainController implements Initializable {
-    @FXML
-    Button startTimerButton;
-    @FXML
-    Button playMusicButtonID;
+public class TimerController extends MainController implements Initializable
+{
+    @FXML Button 	startTimerButton;
+    @FXML Button 	playMusicButtonID;
 
-    @FXML
-    TextField hourText;
-    @FXML
-    TextField minutesText;
-    @FXML
-    TextField secondsText;
-    @FXML
-    Label timerLabel;
-    @FXML
-    Text quotesText;
-    @FXML
-    Label timerErrorLabel;
+    @FXML TextField hourText;
+    @FXML TextField minutesText;
+    @FXML TextField secondsText;
+    @FXML Label 	timerLabel;
+    @FXML Text 		quotesText;
+    @FXML Label 	timerErrorLabel;
 
     // Instance Variables for the timer behavior
-    private Timer timer;
-    private TimerTask task;
-    private Date timeToStopAt;
-    private AnimationTimer animationTimer;
-    private boolean timerSet;
+    private Timer 			timer;
+    private TimerTask 		task;
+    private Date 			timeToStopAt;
+    private AnimationTimer 	animationTimer;
+    private boolean 		timerSet;
 
     // Instance variables for playing random music (this is here so users have
     // quick access to music)
@@ -70,8 +63,8 @@ public class TimerController extends MainController implements Initializable {
     /**
      * Plays a simple music file.
      */
-    public void playMusicButton(ActionEvent event) {
-//		System.out.println("Playing Music File!");
+    public void playMusicButton(ActionEvent event)
+    {
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
@@ -86,8 +79,9 @@ public class TimerController extends MainController implements Initializable {
      * @param event - this is the event that will be responsible for changing
      *              scenes.
      */
-    public void goToMusicPageButton(ActionEvent event) throws IOException {
-	goToMusicPage();
+    public void goToMusicPageButton(ActionEvent event) throws IOException
+    {
+    	goToMusicPage();
     }
 
     /**
@@ -96,28 +90,32 @@ public class TimerController extends MainController implements Initializable {
      * @author Saharsh Vedi
      *
      */
-    private class TimerMethod extends AnimationTimer {
-	@Override
-	public void handle(long now) {
-	    handlee();
-	}
+    private class TimerMethod extends AnimationTimer
+    {
+		@Override
+		public void handle(long now)
+		{
+		    handlee();
+		}
 
-	/**
-	 * Calculates the time remaining on the timer and sets the label.
-	 */
-	private void handlee() {
-	    long diff = timeToStopAt.getTime() - Calendar.getInstance().getTimeInMillis();
-	    int seconds = (int) (diff / 1000) % 60;
-	    int minutes = (int) ((diff / (1000 * 60)) % 60);
-	    int hours = (int) ((diff / (1000 * 60 * 60)) % 24);
-	    timerLabel.setText(hours + ":" + minutes + ":" + seconds);
-	    if (diff <= 0) {
-		timerLabel.setText("Time to take a break!");
-		stop();
-		timer.purge();
-		timerSet = false;
-	    }
-	}
+		/**
+		 * Calculates the time remaining on the timer and sets the label.
+		 */
+		private void handlee() 
+		{
+		    long diff = timeToStopAt.getTime() - Calendar.getInstance().getTimeInMillis();
+		    int seconds = (int) (diff / 1000) % 60;
+		    int minutes = (int) ((diff / (1000 * 60)) % 60);
+		    int hours = (int) ((diff / (1000 * 60 * 60)) % 24);
+		    timerLabel.setText(hours + ":" + minutes + ":" + seconds);
+		    if (diff <= 0) 
+		    {
+				timerLabel.setText("Time to take a break!");
+				stop();
+				timer.purge();
+				timerSet = false;
+		    }
+		}
     }
 
     /**
@@ -128,10 +126,11 @@ public class TimerController extends MainController implements Initializable {
      * @param seconds
      * @return
      */
-    public Date timeToDate(int hours, int minutes, int seconds) {
-	Calendar date = Calendar.getInstance();
-	long timeInSecs = date.getTimeInMillis();
-	return new Date(timeInSecs + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000) + (seconds * 1000));
+    public Date timeToDate(int hours, int minutes, int seconds)
+    {
+		Calendar date = Calendar.getInstance();
+		long timeInSecs = date.getTimeInMillis();
+		return new Date(timeInSecs + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000) + (seconds * 1000));
     }
 
     /**
@@ -141,14 +140,16 @@ public class TimerController extends MainController implements Initializable {
      * @param minutes
      * @param seconds
      */
-    public void setTimer(int hours, int minutes, int seconds) {
-	if (timerSet) {
-	    timer.cancel();
-	    timer.purge();
-	}
-	timeToStopAt = timeToDate(hours, minutes, seconds);
-	timer.schedule(task, timeToStopAt);
-	timerSet = true;
+    public void setTimer(int hours, int minutes, int seconds)
+    {
+		if (timerSet)
+		{
+		    timer.cancel();
+		    timer.purge();
+		}
+		timeToStopAt = timeToDate(hours, minutes, seconds);
+		timer.schedule(task, timeToStopAt);
+		timerSet = true;
     }
 
     /**
@@ -156,48 +157,58 @@ public class TimerController extends MainController implements Initializable {
      * 
      * @param time - the time you want to check if it is legal.
      */
-    private boolean timeIsLegal(String time) {
-	if (!time.matches(".*[a-zA-Z]+.*")) {
-	    if (Integer.parseInt(time) >= 0) {
-		return true;
-	    }
-	}
-	return false;
+    private boolean timeIsLegal(String time)
+    {
+    	if (!time.matches(".*[a-zA-Z]+.*"))
+    	{
+		    if (Integer.parseInt(time) >= 0)
+		    {
+		    	return true;
+		    }
+    	}
+    	return false;
     }
 
     /**
      * Starts the timer when the user clicks the Start Timer Button.
      */
-    public void startTimerHandler() {
-	task = new TimerTask() {
-	    public void run() {
-		Platform.runLater(new Runnable() {
-
-		    @Override
-		    public void run() {
-			Notifications.create().title("Break!").text("Time to take a break!").show();
+    public void startTimerHandler()
+    {
+	    task = new TimerTask()
+		{
+		    public void run()
+		    {
+				Platform.runLater(new Runnable()
+				{
+				    @Override
+				    public void run()
+				    {
+				    	Notifications.create().title("Break!").text("Time to take a break!").show();
+				    }
+				});
 		    }
-		});
-	    }
-	};
-
-	// Sets the parameters in the text boxes in the .fxml file
-	timerErrorLabel.setOpacity(0);
-	timer = new Timer("timer");
-	String hoursString = hourText.getText();
-	String minutesString = minutesText.getText();
-	String secondsString = secondsText.getText();
-	if (timeIsLegal(hoursString) && timeIsLegal(minutesString) && timeIsLegal(secondsString)) {
-	    timerErrorLabel.setOpacity(0);
-	    int hours = Integer.parseInt(hoursString);
-	    int minutes = Integer.parseInt(minutesString);
-	    int seconds = Integer.parseInt(secondsString);
-	    setTimer(hours, minutes, seconds);
-	    animationTimer = new TimerMethod();
-	    animationTimer.start();
-	} else {
-	    timerErrorLabel.setOpacity(1);
-	}
+		};
+	
+		// Sets the parameters in the text boxes in the .fxml file
+		timerErrorLabel.setOpacity(0);
+		timer = new Timer("timer");
+		String hoursString = hourText.getText();
+		String minutesString = minutesText.getText();
+		String secondsString = secondsText.getText();
+		if (timeIsLegal(hoursString) && timeIsLegal(minutesString) && timeIsLegal(secondsString))
+		{
+		    timerErrorLabel.setOpacity(0);
+		    int hours = Integer.parseInt(hoursString);
+		    int minutes = Integer.parseInt(minutesString);
+		    int seconds = Integer.parseInt(secondsString);
+		    setTimer(hours, minutes, seconds);
+		    animationTimer = new TimerMethod();
+		    animationTimer.start();
+		} 
+		else
+		{
+		    timerErrorLabel.setOpacity(1);
+		}
 
     }
 
@@ -205,10 +216,10 @@ public class TimerController extends MainController implements Initializable {
      * Initializes the Quotes Text
      */
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-	// TODO Auto-generated method stub
-	QuoteController quoteController = getQuoteController();
-	quotesText.setText(quoteController.getQuote());
-	quoteController.addText(quotesText);
+    public void initialize(URL arg0, ResourceBundle arg1)
+    {
+		QuoteController quoteController = getQuoteController();
+		quotesText.setText(quoteController.getQuote());
+		quoteController.addText(quotesText);
     }
 }

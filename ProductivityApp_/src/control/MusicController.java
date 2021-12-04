@@ -9,45 +9,42 @@ import javafx.scene.control.Button;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
-public class MusicController extends MainController {
+public class MusicController extends MainController
+{
     // Peaceful tracks
-    @FXML
-    Button playMusicTrackID_Jazz;
-    @FXML
-    Button playMusicTrackID_Blues;
-    @FXML
-    Button playMusicTrackID_Piano;
-    @FXML
-    Button playMusicTrackID_Violin;
+    @FXML Button playMusicTrackID_Jazz;
+    @FXML Button playMusicTrackID_Blues;
+    @FXML Button playMusicTrackID_Piano;
+    @FXML Button playMusicTrackID_Violin;
 
     // Up beat Tracks
-    @FXML
-    Button playMusicTrackID_Pop;
-    @FXML
-    Button playMusicTrackID_Funk;
-    @FXML
-    Button playMusicTrackID_Rock;
-    @FXML
-    Button playMusicTrackID_Hiphop;
+    @FXML Button playMusicTrackID_Pop;
+    @FXML Button playMusicTrackID_Funk;
+    @FXML Button playMusicTrackID_Rock;
+    @FXML Button playMusicTrackID_Hiphop;
 
     // Instance variables for playing random music
-    private String filePath = "src\\control\\never_late_smooth_jazz_piano_soft.mp3";
-    private Media media;
+    private String 		filePath = "src\\control\\never_late_smooth_jazz_piano_soft.mp3";
+    private Media 		media;
     private MediaPlayer mediaPlayer;
 
     /**
-     * Plays a simple music file..
+     * Plays a simple music file.
+     * 
+     * @param - the event that plays a music file.
      */
-    public void playMusicButton(ActionEvent event) {
-		System.out.println("Playing Music File!");
+    public void playMusicButton(ActionEvent event)
+    {
+    	System.out.println("Playing Music File!");
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
-	    }
-    
-    // Peaceful tracks
+    }
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
 	public void playMusicTrackID_Jazz() {
-		System.out.println("in the jazz");
+		System.out.println("In the Jazz!");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.stop();
@@ -57,9 +54,11 @@ public class MusicController extends MainController {
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
 	}
-    // Peaceful tracks
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
 	public void playMusicTrackID_Blues() {
-		System.out.println("in the blues");
+		System.out.println("In the Blues!");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.stop();
@@ -68,12 +67,13 @@ public class MusicController extends MainController {
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
-
-
 	}
-    // Peaceful tracks
-	public void playMusicTrackID_Piano() {
-		System.out.println("in the piano");
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
+	public void playMusicTrackID_Piano()
+	{
+		System.out.println("In the Piano");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.stop();
@@ -81,14 +81,14 @@ public class MusicController extends MainController {
 		filePath = "src\\control\\piano.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
-		mediaPlayer.play();
-
-
-		
+		mediaPlayer.play();	
 	}
-    // Peaceful tracks
-	public void playMusicTrackID_Violin() {
-		System.out.println("in the violin");
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
+	public void playMusicTrackID_Violin()
+	{
+		System.out.println("In the Violin");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.stop();
@@ -96,15 +96,15 @@ public class MusicController extends MainController {
 		filePath = "src\\control\\violin.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
-		mediaPlayer.play();
-
-
-		
+		mediaPlayer.play();	
 	}
 	
-    // Peaceful tracks
-	public void playMusicTrackID_Pop() {
-		System.out.println("in the pop");
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
+	public void playMusicTrackID_Pop()
+	{
+		System.out.println("In the Pop");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.pause();
@@ -112,14 +112,14 @@ public class MusicController extends MainController {
 		filePath = "src\\control\\pop.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
-		mediaPlayer.play();
-
-
-		
+		mediaPlayer.play();	
 	}
-    // Peaceful tracks
-	public void playMusicTrackID_Funk() {
-		System.out.println("in the funk");
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
+	public void playMusicTrackID_Funk() 
+	{
+		System.out.println("In the Funk");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.pause();
@@ -127,14 +127,14 @@ public class MusicController extends MainController {
 		filePath = "src\\control\\funk.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
-		mediaPlayer.play();
-
-
-		
+		mediaPlayer.play();	
 	}
-    // Peaceful tracks
-	public void playMusicTrackID_Rock() {
-		System.out.println("in the rap");
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
+	public void playMusicTrackID_Rock()
+	{
+		System.out.println("In the Rap");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.stop();
@@ -142,13 +142,14 @@ public class MusicController extends MainController {
 		filePath = "src\\control\\rock.mp3";
 		media = new Media(new File(filePath).toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
-		mediaPlayer.play();
-
-		
+		mediaPlayer.play();	
 	}
-    // Peaceful tracks
-	public void playMusicTrackID_Hiphop() {
-		System.out.println("in the hiphop");
+    /**
+     * Plays a simple music file, makes sure that two music tracks can't be played at once.
+     */
+	public void playMusicTrackID_Hiphop()
+	{
+		System.out.println("in the Hip-hop");
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.stop();
@@ -158,17 +159,16 @@ public class MusicController extends MainController {
 		mediaPlayer = new MediaPlayer(media);
 		mediaPlayer.play();
 	}
-	
     /**
      * @param musicFile - the music file that you want to pause
      */
-    public void pauseMusic() {
+    public void pauseMusic()
+    {
 		if(mediaPlayer != null)
 		{
 			mediaPlayer.pause();
 		}
     }
-
     /**
      * goToBackToTimerPageButton()
      * 
@@ -178,9 +178,8 @@ public class MusicController extends MainController {
      * @param event - this is the event that will be responsible for changing
      *              scenes.
      */
-    public void goToBackToTimerPageButton(ActionEvent event) throws IOException {
-    	System.out.println("go back");
+    public void goToBackToTimerPageButton(ActionEvent event) throws IOException
+    {
 		goBackToTimerPage();
     }
-
 }

@@ -68,7 +68,7 @@ public class LoginController extends MainController implements Initializable
     /**
      * initialize()
      * 
-     * This method will ....
+     * This method will initialize the quotes and set the text of them in the main application.
      * 
      * @param arg0
      * @param arg1 
@@ -79,10 +79,5 @@ public class LoginController extends MainController implements Initializable
 		QuoteController quoteController = getQuoteController();
 		quotesText.setText(quoteController.getQuote());
 		quoteController.addText(quotesText);
-    }
-    
-    public void quitApplicationButton(ActionEvent event) throws IOException
-    {
-    	quitApplication();
     }
 }

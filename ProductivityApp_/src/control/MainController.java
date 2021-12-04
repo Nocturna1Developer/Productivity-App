@@ -38,7 +38,7 @@ public abstract class MainController
     }
     
     /**
-     * getQuoteController() - This method will ...
+     * getQuoteController() - This method will get allow the application to display inspirational quotes
      * 
      */
     public QuoteController getQuoteController()
@@ -72,12 +72,5 @@ public abstract class MainController
 	
 		primaryStage.setScene(loginPageScene);
 		primaryStage.show();
-    }
-    
-    public void quitApplication() throws IOException
-    {
-		//Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		//window.setTitle("SUCCESS!");
-		//window.close();
     }
 }
