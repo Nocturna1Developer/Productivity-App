@@ -22,27 +22,27 @@
                   <Font name="Cambria Math" size="56.0" />
                </font>
             </Label>
-            <Button id="startTimerButton" alignment="CENTER" layoutX="512.0" layoutY="344.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Funk" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="523.0" layoutY="172.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Jazz" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="634.0" layoutY="542.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Back To Timer Page" />
-            <Button layoutX="633.0" layoutY="488.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" text="Play" />
-            <Button layoutX="748.0" layoutY="488.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" text="Pause" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="512.0" layoutY="344.0" mnemonicParsing="false" onAction="#playMusicTrackID_Funk" prefHeight="38.0" prefWidth="214.0" text="Funk" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="523.0" layoutY="172.0" mnemonicParsing="false" onAction="#playMusicTrackID_Jazz" prefHeight="38.0" prefWidth="214.0" text="Jazz" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="634.0" layoutY="542.0" mnemonicParsing="false" onAction="#goToBackToTimerPageButton" prefHeight="38.0" prefWidth="214.0" text="Back To Timer Page" />
+            <Button layoutX="633.0" layoutY="488.0" mnemonicParsing="false" onAction="#playMusicButton" prefHeight="39.0" prefWidth="99.0" text="Play" />
+            <Button layoutX="748.0" layoutY="488.0" mnemonicParsing="false" onAction="#pauseMusic" prefHeight="39.0" prefWidth="99.0" text="Pause" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="573.0" layoutY="124.0" prefHeight="48.0" prefWidth="344.0" text="Peaceful" textAlignment="CENTER">
                <font>
                   <Font name="Cambria Math" size="25.0" />
                </font>
             </Label>
-            <Button id="startTimerButton" alignment="CENTER" layoutX="759.0" layoutY="172.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Classical" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="748.0" layoutY="344.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Pop" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="759.0" layoutY="172.0" mnemonicParsing="false" onAction="#playMusicTrackID_Piano" prefHeight="38.0" prefWidth="214.0" text="Classical" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="748.0" layoutY="344.0" mnemonicParsing="false" onAction="#playMusicTrackID_Pop" prefHeight="38.0" prefWidth="214.0" text="Pop" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="569.0" layoutY="287.0" prefHeight="48.0" prefWidth="344.0" text="Upbeat" textAlignment="CENTER">
                <font>
                   <Font name="Cambria Math" size="25.0" />
                </font>
             </Label>
-            <Button id="startTimerButton" alignment="CENTER" layoutX="523.0" layoutY="230.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Blues" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="512.0" layoutY="405.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Rock" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="759.0" layoutY="230.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Violin" />
-            <Button id="startTimerButton" alignment="CENTER" layoutX="745.0" layoutY="405.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="214.0" text="Hip-Hop" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="523.0" layoutY="230.0" mnemonicParsing="false" onAction="#playMusicTrackID_Blues" prefHeight="38.0" prefWidth="214.0" text="Blues" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="512.0" layoutY="405.0" mnemonicParsing="false" onAction="#playMusicTrackID_Rock" prefHeight="38.0" prefWidth="214.0" text="Rock" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="759.0" layoutY="230.0" mnemonicParsing="false" onAction="#playMusicTrackID_Violin" prefHeight="38.0" prefWidth="214.0" text="Violin" />
+            <Button id="startTimerButton" alignment="CENTER" layoutX="745.0" layoutY="405.0" mnemonicParsing="false" onAction="#playMusicTrackID_Hiphop" prefHeight="38.0" prefWidth="214.0" text="Hip-Hop" />
          </children>
       </AnchorPane>
    </children>

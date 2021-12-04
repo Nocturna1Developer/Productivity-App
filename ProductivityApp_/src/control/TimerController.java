@@ -71,10 +71,10 @@ public class TimerController extends MainController implements Initializable {
      * Plays a simple music file.
      */
     public void playMusicButton(ActionEvent event) {
-	System.out.println("Playing Music File!");
-	media = new Media(new File(filePath).toURI().toString());
-	mediaPlayer = new MediaPlayer(media);
-	mediaPlayer.play();
+//		System.out.println("Playing Music File!");
+		media = new Media(new File(filePath).toURI().toString());
+		mediaPlayer = new MediaPlayer(media);
+		mediaPlayer.play();
     }
 
     /**
