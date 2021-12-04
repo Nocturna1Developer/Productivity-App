@@ -157,7 +157,7 @@ public class TimerController extends MainController implements Initializable {
      * @param time - the time you want to check if it is legal.
      */
     private boolean timeIsLegal(String time) {
-	if (!time.matches(".*[a-zA-Z]+.*") && !time.equals("")) {
+	if (!time.matches(".*[a-zA-Z]+.*")) {
 	    if (Integer.parseInt(time) >= 0) {
 		return true;
 	    }
@@ -182,6 +182,7 @@ public class TimerController extends MainController implements Initializable {
 	};
 
 	// Sets the parameters in the text boxes in the .fxml file
+	timerErrorLabel.setOpacity(0);
 	timer = new Timer("timer");
 	String hoursString = hourText.getText();
 	String minutesString = minutesText.getText();
