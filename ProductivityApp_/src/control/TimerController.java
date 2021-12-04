@@ -151,7 +151,26 @@ public class TimerController extends MainController implements Initializable
 		timer.schedule(task, timeToStopAt);
 		timerSet = true;
     }
-
+    
+    /**
+     * Checks if the time given is valid or not.
+     * 
+     * @param time - the time you want to check if it is legal.
+     */
+    @SuppressWarnings("unused")
+	private boolean timeIsLegal(String time)
+    {
+		if (!time.matches(".*[a-zA-Z]+.*") && !time.equals(""))
+		{
+		    if (Integer.parseInt(time) >= 0)
+		    {
+		    	return true;
+		    }
+	    }
+		return false;
+    }
+    
+	    
     /**
      * @param time - set the amount of time you want to work or rest
      */
