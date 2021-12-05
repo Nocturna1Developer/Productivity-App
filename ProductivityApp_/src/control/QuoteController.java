@@ -3,12 +3,9 @@
  */
 package control;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
 
 /**
